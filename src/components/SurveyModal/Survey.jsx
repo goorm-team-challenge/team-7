@@ -9,7 +9,7 @@ import {
 
 import styles from './Survey.module.scss';
 
-const Survey = ({ isOpen, toggle }) => {
+const Survey = ({ isOpen, increment, toggle }) => {
 	return (
 		<Modal isOpen={isOpen} toggle={toggle}>
 			<Modal.Header toggle={toggle} centered />
@@ -87,7 +87,7 @@ const Survey = ({ isOpen, toggle }) => {
 			</Modal.Body>
 			<Modal.Footer between>
 				<CarouselIndicators length={4} activeIndex={2} />
-				<Button>다음</Button>
+				<Button onClick={increment}>다음</Button>
 			</Modal.Footer>
 		</Modal>
 	);

@@ -10,7 +10,7 @@ import {
 
 import styles from './FeedBack.module.scss';
 
-const FeedBack = ({ isOpen, toggle }) => {
+const FeedBack = ({ isOpen,increment, toggle }) => {
 	return (
 		<Modal isOpen={isOpen} toggle={toggle}>
 			<Modal.Header toggle={toggle} centered />
@@ -46,7 +46,7 @@ const FeedBack = ({ isOpen, toggle }) => {
 				<CarouselIndicators length={4} activeIndex={3} />
 				<div className={cn(styles.back_forward_bt)}>
 					<Button color="basic">이전</Button>
-					<Button onClick={() => {}} disabled>
+					<Button onClick={increment} disabled>
 						다음
 					</Button>
 				</div>
