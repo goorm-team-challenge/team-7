@@ -1,7 +1,9 @@
 import { EmptyView, Header } from '@/components';
 
 import styles from './App.module.scss';
+
 import MainView from './components/MainView/MainView';
+import ModalSign from './components/ModalSign/ModalSign';
 
 function App() {
 	const users = [
@@ -20,10 +22,13 @@ function App() {
 	];
 	return (
 		<div className={styles.App}>
+			<ModalSign />
+			{/*
 			<Header />
 			<main className={styles.main}>
 				{users ? <MainView props={users} /> : <EmptyView />}
 			</main>
+			*/}
 		</div>
 	);
 }
