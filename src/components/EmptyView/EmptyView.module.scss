@@ -2,4 +2,7 @@
     padding-top: 4.5rem /* 72px -> 4.5rem */;
     padding-bottom: 4.5rem /* 72px -> 4.5rem */;
     gap: .5rem /* 8px -> .5rem */;
+    display: "flex";
+    justify-content: center; 
+    align-items: center;
 }
