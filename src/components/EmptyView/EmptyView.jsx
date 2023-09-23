@@ -9,14 +9,23 @@ import styles from './EmptyView.module.scss';
 const EmptyView = () => {
 	return (
 		<Card center padding="none" className={cn(styles.emptyView)}>
-			<img
-				width={112}
-				src="https://statics.goorm.io/images/gds/empty_task.svg"
-				alt="empty view"
-			/>
-			<Typography color="hint" token="paragraph-sm">
-				응답한 참여자가 없습니다.
-			</Typography>
+			<div
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'center',
+					alignItems: 'center',
+				}}
+			>
+				<img
+					width={112}
+					src="https://statics.goorm.io/images/gds/empty_task.svg"
+					alt="empty view"
+				/>
+				<Typography color="hint" token="paragraph-sm">
+					응답한 참여자가 없습니다.
+				</Typography>
+			</div>
 		</Card>
 	);
 };
