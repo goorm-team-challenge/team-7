@@ -1,4 +1,7 @@
+import { useState } from 'react';
 import cn from 'classnames';
+
+import { FeedBack, Survey } from '@/components';
 
 import { Button, Typography } from '@goorm-dev/gds-challenge';
 import { Info } from '@/components';
@@ -23,6 +26,7 @@ const Header = () => {
 				</Typography>
 				<Button size="lg" onClick={handleOpen}>설문조사 참여하기</Button>
 				{isOpen && <Info isOpen={isOpen} toggle={handleOpen}/>}
+				{/* {isOpen && <FeedBack isOpen={isOpen} toggle={handleOpen} />} */}
 			</div>
 		</header>
 	);
