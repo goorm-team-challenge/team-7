@@ -1,0 +1,17 @@
+.FlexContainer {
+	display: flex;
+	gap: 16px;
+}
+
+.GridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(2, 1fr); /* Two rows */
+  gap: 10px; /* Adjust the gap size as needed */
+  /* Set the container height, if necessary */
+  height: auto; /* or specify a height */
+}
+
+.GridItem {
+  align-self: start;
+}
