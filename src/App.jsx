@@ -1,4 +1,4 @@
-import { EmptyView, Header } from '@/components';
+import { Card, EmptyView, Header } from '@/components';
 
 import styles from './App.module.scss';
 
@@ -7,7 +7,7 @@ function App() {
 		<div className={styles.App}>
 			<Header />
 			<main className={styles.main}>
-				<EmptyView />
+				 <EmptyView /> 
 			</main>
 		</div>
 	);
