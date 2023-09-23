@@ -13,7 +13,7 @@ const TEL_REGEX = /^010[0-9]{8}$/;
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const MESSAGE = '양식에 맞게 입력해주세요.';
 
-const ModalSign = (toggle = 1) => {
+const ModalSign = ({ isOpen, increment, toggle }) => {
 	const [agreePolicy, setAgreePolicy] = useState(true);
 	const [agreeMarketing, setAgreeMarketing] = useState(true);
 	const [agreeAds, setAgreeAds] = useState(true);
@@ -214,7 +214,7 @@ const ModalSign = (toggle = 1) => {
 				<div style={{ marginRight: '300px' }}>
 					<CarouselIndicators length={4} activeIndex={0} />
 				</div>
-				<Button onClick={handleOnClickSubmit} disabled={!agreePolicy}>
+				<Button onClick={increment} disabled={!agreePolicy}>
 					다음
 				</Button>
 			</Modal.Footer>

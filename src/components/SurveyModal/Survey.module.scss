@@ -1,0 +1,35 @@
+.expected_challenge {
+    color: var(--light-gray-gray-900, #2B2D36);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* KOR/H4ㅣ1.25rem */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 150% */
+    letter-spacing: -0.2px;
+}
+
+.collect_data {
+    color: var(--light-gray-gray-600-hint, #858899);
+    text-align: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    /* KOR/paragraph-smㅣ0.75rem */
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+    letter-spacing: -0.1px;
+}
+
+.progressBar {
+    display: flex;
+    align-items: center;
+}
+
+.suvery_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
