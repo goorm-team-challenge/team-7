@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { Button, Typography, Modal, Label, Input, Form, TextArea} from '@goorm-dev/gds-challenge';
+import { Button, Typography, Modal, Label, Input, Form, TextArea, CarouselIndicators} from '@goorm-dev/gds-challenge';
 import {useState} from "react";
 
 import styles from './Info.module.scss';
@@ -21,7 +21,7 @@ const Info = ({isOpen, toggle}) => {
 					<Typography token={"caption"}>더 좋은 챌린지가 될 수 있도록 데이터를 수집하려고 해요.</Typography>
 				</Modal.Header>
 				<Modal.Body>
-					<Label>1. SW 관련 학과를 전공하셨나요? *</Label>
+					<Label>1. SW 관련 학과를 전공하셨나요? <span className={cn(classnames.asterik)}>*</span></Label>
 					<Form.Group>
 						<div className={cn(styles.FlexContainer)}>
 							<Button 
@@ -42,7 +42,7 @@ const Info = ({isOpen, toggle}) => {
 							</Button>
 						</div>
 					</Form.Group>
-					<Label>2. 구름 서비스를 사용해보신 적이 있나요? *</Label>
+					<Label>2. 구름 서비스를 사용해보신 적이 있나요? <span className={cn(classnames.asterik)}>*</span></Label>
 					<Form.Group>
 						<div className={cn(styles.FlexContainer)}>
 							<Button 
@@ -95,6 +95,10 @@ const Info = ({isOpen, toggle}) => {
 					
 				</Modal.Body>
 				<Modal.Footer>
+					<div style={{ marginRight: '300px' }}>
+						<CarouselIndicators length={4} activeIndex={1} />
+					</div>
+			
 					<Button>다음</Button>
 				</Modal.Footer>
 			</Modal>
