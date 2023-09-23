@@ -6,13 +6,13 @@ import ModalSign from './components/ModalSign/ModalSign';
 function App() {
 	return (
 		<div className={styles.App}>
-			<ModalSign />
-			{/*
+			{/* <ModalSign /> */}
+		
 			<Header />
 			<main className={styles.main}>
 				 <EmptyView /> 
 			</main>
-			*/}
+			
 		</div>
 	);
 }

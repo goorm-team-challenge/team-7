@@ -17,8 +17,8 @@ const Info = ({isOpen, toggle}) => {
 		<>
 			<Modal isOpen={isOpen} toggle={toggle} size="md">
 				<Modal.Header toggle={toggle} centered>
-					<Typography>구름 서비스 이용 경험을 알려주세요.</Typography>
-					<Typography>더 좋은 챌린지가 될 수 있도록 데이터를 수집하려고 해요.</Typography>
+					<Typography weight={700} token={"h4"}>구름 서비스 이용 경험을 알려주세요.</Typography>
+					<Typography token={"caption"}>더 좋은 챌린지가 될 수 있도록 데이터를 수집하려고 해요.</Typography>
 				</Modal.Header>
 				<Modal.Body>
 					<Label>1. SW 관련 학과를 전공하셨나요? *</Label>
