@@ -13,7 +13,6 @@ const TEL_REGEX = /^[0-9]{11}$/;
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const ModalSign = (toggle = 1) => {
-	const [agreeAll, setAgreeAll] = useState(false);
 	const [agreePolicy, setAgreePolicy] = useState(false);
 	const [agreeMarketing, setAgreeMarketing] = useState(false);
 	const [agreeAds, setAgreeAds] = useState(false);
@@ -38,11 +37,13 @@ const ModalSign = (toggle = 1) => {
 
 		if (name === 'policy-agreement') setAgreePolicy(checked);
 		else if (name === 'marketing-agreement') setAgreeMarketing(checked);
-		else if (name === 'ads-agreement') setAgreeAds(checked);
-		else if (name === 'email-agreement') setAgreeEmail(checked);
+		else if (name === 'ads-agreement') {
+			setAgreeAds(checked);
+			setAgreeEmail(checked);
+			setAgreeSms(checked);
+		} else if (name === 'email-agreement') setAgreeEmail(checked);
 		else if (name === 'sms-agreement') setAgreeSms(checked);
 		else {
-			setAgreeAll(checked);
 			setAgreePolicy(checked);
 			setAgreeMarketing(checked);
 			setAgreeAds(checked);
@@ -112,7 +113,7 @@ const ModalSign = (toggle = 1) => {
 							전체 동의
 						</Typography>
 					}
-					checked={agreeAll}
+					checked={agreePolicy && agreeMarketing && agreeAds}
 					onChange={handleAgreement}
 					name="all-agreement"
 				/>
@@ -151,7 +152,7 @@ const ModalSign = (toggle = 1) => {
 							광고성 정보 수신
 						</Typography>
 					}
-					checked={agreeAds}
+					checked={agreeEmail || agreeSms}
 					onChange={handleAgreement}
 					name="ads-agreement"
 				/>
