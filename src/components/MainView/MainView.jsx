@@ -67,7 +67,6 @@ const MainView = ({ props }) => {
 									icon={<ChevronDownIcon />}
 								/>
 							</div>
-							<div>h</div>
 						</Collapse>
 					);
 				})}
