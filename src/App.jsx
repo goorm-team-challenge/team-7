@@ -1,4 +1,4 @@
-import { EmptyView, Header } from '@/components';
+import { Card, EmptyView, Header } from '@/components';
 
 import styles from './App.module.scss';
 
@@ -22,13 +22,14 @@ function App() {
 	];
 	return (
 		<div className={styles.App}>
-			<ModalSign />
-			{/*
+			{/* <ModalSign /> */}
+		
 			<Header />
 			<main className={styles.main}>
 				{users ? <MainView props={users} /> : <EmptyView />}
+
 			</main>
-			*/}
+			
 		</div>
 	);
 }
