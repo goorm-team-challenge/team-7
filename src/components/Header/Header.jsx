@@ -35,9 +35,10 @@ const Header = () => {
 					<ModalSign isOpen={isOpen} increment={handleOpen} toggle={handleToggle} />
 				)}
 				{!toggle && isOpen === 2 && (
-					<Info isOpen={isOpen} toggle={handleToggle} />
+					<Info isOpen={isOpen} increment={handleOpen} toggle={handleToggle} />
 				)}
-				{/* {isOpen && <FeedBack isOpen={isOpen} toggle={handleOpen} />} */}
+				{!toggle && isOpen === 3 && (<Survey isOpen={isOpen} increment={handleOpen} toggle={handleOpen} />)}
+				{!toggle && isOpen === 4 && (<FeedBack isOpen={isOpen} increment={handleOpen} toggle={handleOpen} />)}
 			</div>
 		</header>
 	);
